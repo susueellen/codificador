@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang =" pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body background="img/foto2.webp">
+
+  
+<div class="container">  
+  <h1>Decodificador de texto</h1>
+  <label for="mensagem1"> <b><p>Escreva a sua mensagem:</b></p></label>
+  <textarea cols="30" rows="3" name="msg1" id="msg1"></textarea>
+
+  <label for="escolhaMetodo"><b><p> Escolha o método:</b></p></label><br>
+  <select name="cifras" id="cifras">
+    <option value="emBranco">Escolha</option>
+    <option value="cesar" id="cCesar"> Cifra de César</option>
+    <option value="base" id="b64">Base64</option>
+  </select><br>
+
+
+<div class="seletorCesar" style="display: none;">
+    <p>Incremento da Cifra de César - <br> Insira o número da posição</p>
+    <input type="number" name="posiçãoCesar" id="posiçãoCesar" min="1" max="26">
+</div>
+ 
+<div class="radioType">
+  <p>
+  <input type="radio" name="options" value="criptografar" id="criptografar">
+  <label for="criptografar" id="labelCriptografar"><b>Criptografe </b></label> 
+  </p>
+
+  <input type="radio" name="options" value="descriptografar" id="descriptografar">
+  <label for="descriptografar" id="labelDescriptografar"><b>Descriptografe </b></label>
+</div>
+
+<div class="botaomsg">
+  <p>
+  <input type="submit" id="submit" value="Criptografar" style="display: flex;">
+  <input type="submit" id="submit" value="Descriptografar" style="display: none;">
+  </p>
+</div>
+
+<label for="resultado" id="resultado"></label>
+<textarea name="msg2" id="msg2" cols="30" rows="3"></textarea>
+
+<script src="main.js"></script>
+
+</body>
+</html>
